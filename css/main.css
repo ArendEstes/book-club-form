@@ -1,0 +1,71 @@
+/* page background*/
+#pg-background{position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(#8B4513, #D2691E, #8B4513);
+    z-index: -10;
+  }
+  
+  /*club name, outise of form  */
+  #club-name p{
+    font-family: "Comic Sans MS";
+    color: #ffffff;
+  }
+  
+  #club{
+    font-size: 1.6em;
+    margin-top: -4px;
+  }
+  
+  hr{
+    width: 7em;
+    color: white;
+    background-color: white;
+    
+  }
+  
+  .center{
+    text-align: center;
+  }
+  
+  /*container*/
+  #main-container{
+    background: white;
+    width: 75%;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.47);
+    font-family: Sans-serif;
+    font-weight: bold;
+    }
+  /*title  */
+  #survey-form{
+    line-height: 2em;
+  }
+  
+  /* form input section */
+  #number{
+    width: 15em;
+  }
+  #moreinfo{
+    display: flex;
+    flex-direction: column;
+  }
+  #submit{
+   display: block;
+   margin: auto;
+   height: 2em;
+   width: 6em;
+  }
+  .genrecb{
+    font-weight: normal;
+    display: inline-block;
+  }
+  .genrerb{
+    font-weight: normal;
+  }
