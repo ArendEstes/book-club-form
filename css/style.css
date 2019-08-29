@@ -61,6 +61,7 @@
    margin: auto;
    height: 2em;
    width: 6em;
+   background: #979695;
   }
   .genrecb{
     font-weight: normal;
@@ -68,4 +69,8 @@
   }
   .genrerb{
     font-weight: normal;
+  }
+
+  .section{
+    margin-bottom: 2em;
   }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Book Club Form</title>
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
     <!--page background -->
@@ -28,70 +28,82 @@
 <form id='survey-form'>
   
   <!--name, emale, phone, age inputs-->
-  <label for='name' id='name-label'>Name: </label><input type="text" id='name' placeholder='enter your name' required><br>
-  
-  <label for="email" id="email-label">Email: </label><input type="email" id='email' placeholder="enter email" required><br>
-  
-  <label for='number' id="number-label">Phone Number: </label><input type='number' min="0" max='19999999999' id='number' placeholder="enter phone number" required><br>
-  
-  <label for='age-group'>What is your age group?</label>
-  <select name="age-group" id="dropdown">
-    <option value='-18'>Under 18</option>
-    <option value="18-25">18-25</option>
-    <option value="26-35">26-35</option>
-    <option value="+35">Over 35</option>
-  </select><br><br>
+  <div class="section">
+    <div>
+      <label for='name' id='name-label'>Name: </label><input type="text" id='name' name="name" placeholder='enter your name' oninput="checkInput()" required><br>
+    </div>
+    <div>
+      <label for="email" id="email-label">Email: </label><input type="email" id='email' name="email" placeholder="enter email" oninput="checkInput()" required><br>
+    </div>
+    <div>
+      <label for='number' id="number-label">Phone Number: </label><input type='number' min="0" max='19999999999' id='number' name="number" placeholder="enter phone number"><br>
+    </div>
+    <div>
+      <label for='age-group'>What is your age group?</label>
+      <select name="age-group" id="dropdown">
+        <option value='-18'>Under 18</option>
+        <option value="18-25">18-25</option>
+        <option value="26-35">26-35</option>
+        <option value="+35">Over 35</option>
+      </select>
+    </div>
+  </div>
+
   <!--fiction or nonfiction inputs-->
-  <label for='fiction-nonfiction'>Do you prefer fiction or non-fiction?</label><br>
-  <label class='genrerb'>
-    <input type='radio' name='fiction-nonfiction' value='fiction'>Fiction
-  </label>
-  <label class='genrerb'>
-    <input type="radio" name='fiction-nonfiction' value='non'>Non-fiction
-  </label>
+  <div class="section">
+    <label for='fiction-nonfiction'>Do you prefer fiction or non-fiction?</label><br>
+    <label class='genrerb'>
+      <input type='radio' name='fiction-nonfiction' value='fiction'>Fiction
+    </label>
+    <label class='genrerb'>
+      <input type="radio" name='fiction-nonfiction' value='non'>Non-fiction
+    </label>
+  </div>
   
-  <br><br>
+
   
   
   <!--genre inputs-->
-  <label for='genres'>Select all genres that interest you.</label>
-  <br>
-  <label for='genres'>Fiction:<label><br>
-    
-  <div class='genrecb'><label><input type='checkbox' value='classic' name="genres">classic </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='comics' name="genres">comics/graphic novel </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='crime' name="genres">crime/detective </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='drama' name="genres">drama </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='fable' name="genres">fable </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='fairy-tale' name="genres">fairy tale </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='fan-fiction' name="genres">fan fiction </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='fantasy' name="genres">fantasy </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='folklore' name="genres">folklore </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='historical' name="genres">historical fiction </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='horror' name="genres">horror </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='humor' name="genres">humor </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='legend' name="genres">legend </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='mystery' name="genres">mystery </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='mythology' name="genres">mythology </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='realistic' name="genres">realistic fiction </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='romance' name="genres">romance </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='science-fiction' name="genres">science fiction </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='short' name="genres">short story </label></div>
-  <div class='genrecb'><label><input type='checkbox' value='suspense' name="genres">suspense/thriller </label></div>
-    <div class='genrecb'><label><input type='checkbox' value='swashbuckler' name="genres">swashbuckler </label></div>
-    <div class='genrecb'><label><input type='checkbox' value='western' name="genres">western </label></div><br>
-  <label for='genres'>Non-fiction:<label><br>
-    <div class='genrecb'><label><input type='checkbox' value='autobiography' name='genres'>autobiography </label></div>
-    <div class='genrecb'><label><input type='checkbox' value='biography' name='genres'>biography </label></div>
-    <div class='genrecb'><label><input type='checkbox' value='journalism' name='genres'>journalism </label></div>
-    <div class='genrecb'><label><input type='checkbox' value='memoir' name='genres'>memoir </label></div>
-    <div class='genrecb'><label><input type='checkbox' value='narrative-nonfiction' name='genres'>narrative nonfiction </label></div><br><br>
-    
+  <div>
+    <label for='genres'>Select all genres that interest you.</label>
+    <br>
+    <label for='genres'>Fiction:<label><br>
+      
+    <div class='genrecb'><label><input type='checkbox' value='classic' name="genres">classic </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='comics' name="genres">comics/graphic novel </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='crime' name="genres">crime/detective </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='drama' name="genres">drama </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='fable' name="genres">fable </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='fairy-tale' name="genres">fairy tale </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='fan-fiction' name="genres">fan fiction </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='fantasy' name="genres">fantasy </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='folklore' name="genres">folklore </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='historical' name="genres">historical fiction </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='horror' name="genres">horror </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='humor' name="genres">humor </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='legend' name="genres">legend </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='mystery' name="genres">mystery </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='mythology' name="genres">mythology </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='realistic' name="genres">realistic fiction </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='romance' name="genres">romance </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='science-fiction' name="genres">science fiction </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='short' name="genres">short story </label></div>
+    <div class='genrecb'><label><input type='checkbox' value='suspense' name="genres">suspense/thriller </label></div>
+      <div class='genrecb'><label><input type='checkbox' value='swashbuckler' name="genres">swashbuckler </label></div>
+      <div class='genrecb'><label><input type='checkbox' value='western' name="genres">western </label></div><br>
+    <label for='genres'>Non-fiction:<label><br>
+      <div class='genrecb'><label><input type='checkbox' value='autobiography' name='genres'>autobiography </label></div>
+      <div class='genrecb'><label><input type='checkbox' value='biography' name='genres'>biography </label></div>
+      <div class='genrecb'><label><input type='checkbox' value='journalism' name='genres'>journalism </label></div>
+      <div class='genrecb'><label><input type='checkbox' value='memoir' name='genres'>memoir </label></div>
+      <div class='genrecb'><label><input type='checkbox' value='narrative-nonfiction' name='genres'>narrative nonfiction </label></div><br><br>
+  </div>  
     <!--more info input-->
-    <div id='moreinfo'><label for="infotext">Please enter any additional information here.</label><textarea id='infotext' placeholder='enter info'></textarea></div><br>
-    
+  <div>
+    <div id='moreinfo'><label for="infotext">Please enter any additional information here.</label><textarea id='infotext' name="infotext" placeholder='enter info'></textarea></div><br>
+  </div>
     <!--submit button-->
-    <button type='submit' id='submit'>Submit</button>
+    <button type='submit' id='submit' disabled>Submit</button>
   
   
   
@@ -99,4 +111,5 @@
 </form>
   </div>
 </body>
+<script src="./js/main.js"></script>
 </html>
